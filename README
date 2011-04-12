@@ -1,1 +1,9 @@
 Welcome to the ProjectStarter repository
+
+ProjectStarter is a simple, opinionated CLi program to help you create an initial directory structure
+for your .NET C# projects. It will create a new directory with the name you pass to it containing a src, tests lib, and bin directories. 
+Initially it will create a build.proj file and README as well. 
+You can then customize the build.proj file to specify your projects name, the output type, and any references you need.
+
+Why start with an MSBuild file instead of a Visual Studio solution? You can always create a new VS solution later if you prefer. By creating an MSBuild file first you are instantly set up to use a continuous integration server and can use any IDE you'd like.
+
