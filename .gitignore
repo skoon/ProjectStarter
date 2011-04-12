@@ -1,3 +1,17 @@
-bin
 obj
+bin
+*.csproj.user
+*ReSharper*
+*resharper*
+*.suo
+*.cache
+* Thumbs.db
+
+# Other useful stuff
+*.bak
+*.cache
+*.log
+*.swp
+*.user
+
 
