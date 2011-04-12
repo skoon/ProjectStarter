@@ -1,0 +1,74 @@
+<Project DefaultTargets="All" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" 
+    ToolsVersion="3.5">
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
+    <PropertyGroup Condition="'$(Configuration)'==''">
+        <Configuration>Debug</Configuration>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+        <Optimize>false</Optimize>
+        <DebugSymbols>true</DebugSymbols>
+        <OutputPath>bin</OutputPath>
+        <OutDir>bin\</OutDir>
+        <IntermediateOutputPath>bin\</IntermediateOutputPath>
+    </PropertyGroup>
+
+  <UsingTask
+    AssemblyFile="lib\xUnit-1.7\xunit.runner.msbuild.dll"
+    TaskName="Xunit.Runner.MSBuild.xunit"/>
+
+
+
+    <!-- Set the application name as a property -->
+    <PropertyGroup>
+        <appname>Screwturn.YouTubePlugin</appname>
+    </PropertyGroup>
+    <ItemGroup>
+        <AppFiles Include="src\\**\*.cs" />
+        <AppReference Include="mscorlib.dll" />
+        <AppReference Include="System.dll" />
+        <AppReference Include="System.Core.dll" />
+        <!-- Add your other references here -->
+
+        <TestFiles Include="tests\MvcGen-Tests\\**\*.cs" />
+        <TestReference Include="mscorlib.dll" />
+        <TestReference Include="System.dll" />
+        <TestReference Include="System.Core.dll" />
+        <TestReference Include="lib/Xunit-1.7/xunit.dll" />
+        <!-- Add a reference to your assembly or exe here -->
+    </ItemGroup>
+
+    <Target Name="All" DependsOnTargets="Clean; Compile; CompileTests; RunTests">
+        <Message Text="Compile All" />
+    </Target>
+
+    <Target Name = "Compile" DependsOnTargets="ResolveAssemblyReferences">    
+        <Message Text="References = @(AppReference)" />
+        <CSC Sources="@(AppFiles)"
+            References="@(AppReference)"
+            OutputAssembly="$(OutputPath)\$(AppName).dll"
+            EmitDebugInformation="$(DebugSymbols)"
+            TargetType="library" /> <!-- Change this to the output type you want -->
+    </Target>
+
+    <Target Name="CompileTests">
+        <Message Text="References = @(TestReference)" />
+        <CSC Sources="@(TestFiles)"
+            References="@(TestReference)"
+            OutputAssembly="$(OutputPath)\$(AppName)-tests.dll"
+            EmitDebugInformation="$(DebugSymbols)"
+            TargetType="library" />
+    </Target>
+
+    <Target Name="RunTests" DependsOnTargets="Compile">
+        <!-- Change this to point to your Assembly or exe -->
+        <!--<xunit Assembly="bin\Screwturn.YouTubePlugin-tests.dll" />-->
+    </Target>
+    
+    <Target Name="Clean">
+        <Message Text="Cleaning previous build" />
+    </Target>
+</Project>
+
+
