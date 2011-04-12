@@ -64,11 +64,15 @@
 
     <Target Name="RunTests" DependsOnTargets="Compile">
         <!-- Change this to point to your Assembly or exe -->
+        <Copy 
+            SourceFiles="lib\xunit-1.7\xunit.dll;lib\Moq.3.1.416.3-bin\Moq.dll"
+            DestinationFolder="bin" />
         <xunit Assembly="bin\ProjectStarter-tests.dll" />
     </Target>
     
     <Target Name="Clean">
         <Message Text="Cleaning previous build" />
+        <Delete Files="bin\*.*" />
     </Target>
 </Project>
 
