@@ -7,4 +7,14 @@ namespace ProjectStarter {
         string Name { get; set;}
     }
 
+    public class NewProject : ICommand {
+        
+        public void Execute() {
+        
+        }
+
+        public string[] Args {get; set;}
+        public string Name {get; set;}   
+    }
 }
+
