@@ -36,7 +36,7 @@ namespace ProjectStarter_tests {
         }
 
         public void the_command_property_should_be_the_correct_concrete_type() {
-            
+           Assert.IsType(typeof(NewProject), parser.Command); 
         }
     }
 
