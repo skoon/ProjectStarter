@@ -8,7 +8,8 @@ namespace ProjectStarter
         private IFileSystem _fileSystem;
         public ArgParser(string[] args, IFileSystem FileSystem) {
             _fileSystem = FileSystem;
-            Command = new NewProject();
+            Command = new NewProject(FileSystem);
+            Command.Args = args;
         }        
     }
 }
