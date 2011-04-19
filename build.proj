@@ -6,11 +6,23 @@
         <Configuration>Debug</Configuration>
     </PropertyGroup>
 
-    <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <PropertyGroup>
+        <Platform>AnyCPU</Platform>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
         <Optimize>false</Optimize>
         <DebugSymbols>true</DebugSymbols>
         <OutDir>bin\Debug\</OutDir>
         <IntermediateOutputPath>bin\Debug\</IntermediateOutputPath>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+        <Optimize>true</Optimize>
+        <DebugSymbols>false</DebugSymbols>
+        <OutDir>bin\Release\</OutDir>
+        <OutputPath>bin\Release</OutputPath>
+        <IntermediateOutputPath>bin\Release\</IntermediateOutputPath>
     </PropertyGroup>
 
   <UsingTask

@@ -16,7 +16,10 @@ namespace ProjectStarter {
         }
 
         public void Execute() {
-             _fileSystem.CreateDirectoryInWorkingDirectory(Args[0]);
+            _fileSystem.CreateDirectory(Args[0]);
+            _fileSystem.CreateDirectoryInWorkingDirectory("src");
+            _fileSystem.CreateDirectoryInWorkingDirectory("tests");
+            _fileSystem.CreateDirectoryInWorkingDirectory("lib");
         }
 
         public string[] Args {get; set;}

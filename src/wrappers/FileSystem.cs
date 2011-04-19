@@ -39,10 +39,6 @@ namespace ProjectStarter
         {
             _fileInfoWrapper.CreateFile(name, contents);
         }
-        
-        public void CreateTestsDirectory()
-        {
-            CreateDirectory("tests");
-        }
     }
+        
 }

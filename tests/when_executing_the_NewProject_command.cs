@@ -20,6 +20,20 @@ namespace ProjectStarter_tests {
         public void the_project_directory_should_be_created() {
             Assert.Contains(projectname, mockFileSystem.directoriesCreated);
         }
-    
+
+        [Fact]
+        public void the_src_directory_should_be_created() {
+            Assert.Contains("src", mockFileSystem.directoriesCreated);
+        }
+
+        [Fact]
+        public void the_tests_directory_should_be_created() {
+            Assert.Contains("tests", mockFileSystem.directoriesCreated);
+        }
+   
+       [Fact]
+        public void the_lib_directory_should_be_created() {
+           Assert.Contains("lib", mockFileSystem.directoriesCreated);
+        } 
     }
 }
