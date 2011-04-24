@@ -29,7 +29,7 @@ namespace ProjectStarter_tests {
 
         [Fact]
         public void should_throw_when_passed_a_null_FileSystem() {
-            Assert.Throws<ArgumentNullException>(delegate { var p = new ArgParser(null, null);});
+            Assert.Throws<ArgumentNullException>(delegate {  new ArgParser(null, null);});
         }
     }
 }

@@ -26,7 +26,7 @@
     </PropertyGroup>
 
   <UsingTask
-    AssemblyFile="lib\xUnit-1.7\xunit.runner.msbuild.dll"
+    AssemblyFile="lib\xunit-1.7\xunit.runner.msbuild.dll"
     TaskName="Xunit.Runner.MSBuild.xunit"/>
 
 
@@ -48,7 +48,7 @@
         <TestReference Include="mscorlib.dll" />
         <TestReference Include="System.dll" />
         <TestReference Include="System.Core.dll" />
-        <TestReference Include="lib/Xunit-1.7/xunit.dll" />
+        <TestReference Include="lib/xunit-1.7/xunit.dll" />
         <TestReference Include="lib/Moq.3.1.416.3-bin/Moq.dll" />
         <TestReference Include="$(OutDir)/ProjectStarter.exe" />
     </ItemGroup>
