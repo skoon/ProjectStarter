@@ -33,7 +33,7 @@
 
     <!-- Set the application name as a property -->
     <PropertyGroup>
-        <appname>ProjectStarter</appname>
+        <appname>ps</appname>
     </PropertyGroup>
     <ItemGroup>
         <EmbeddedResource Include="src\\templates\\build.proj" />

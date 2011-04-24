@@ -10,7 +10,7 @@ namespace ProjectStarter {
     public class NewProject : ICommand {
        
         private IFileSystem _fileSystem;
-        private string[] _directorylist = new string[] { "src", "tests", "lib", "wraps" };
+        private string[] _directorylist = new string[] { "src", "tests", "lib", "wraps", "configs" };
 
         public NewProject(IFileSystem FileSystem) {
             _fileSystem = FileSystem; 

@@ -37,8 +37,13 @@ namespace ProjectStarter_tests {
         } 
 
        [Fact]
-        public void _the_wraps_directory_should_be_created() {
+        public void the_wraps_directory_should_be_created() {
             Assert.Contains("wraps", mockFileSystem.directoriesCreated);
+        }
+
+       [Fact]
+        public void the_configs_directory_should_be_created() {
+            Assert.Contains("configs", mockFileSystem.directoriesCreated);
         }
     }
 }
