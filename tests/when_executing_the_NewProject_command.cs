@@ -35,5 +35,10 @@ namespace ProjectStarter_tests {
         public void the_lib_directory_should_be_created() {
            Assert.Contains("lib", mockFileSystem.directoriesCreated);
         } 
+
+       [Fact]
+        public void _the_wraps_directory_should_be_created() {
+            Assert.Contains("wraps", mockFileSystem.directoriesCreated);
+        }
     }
 }
