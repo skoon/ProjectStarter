@@ -42,7 +42,8 @@
         <AppReference Include="mscorlib.dll" />
         <AppReference Include="System.dll" />
         <AppReference Include="System.Core.dll" />
-        <!-- Add your other references here -->
+        <AppReference Include="System.Web.Extensions" />
+         <!-- Add your other references here -->
 
         <TestFiles Include="tests\\**\*.cs" />
         <TestReference Include="mscorlib.dll" />
