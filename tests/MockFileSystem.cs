@@ -11,6 +11,7 @@ namespace ProjectStarter_tests {
         public bool CreateDirectoryInWorkingDirectoryCalled = false;
 
         public List<string> directoriesCreated = new List<string>();
+        public List<string> FilesRead = new List<string>();
         
         public void CreateDirectory(string name) {
             CreateDirectoryCalled = true;
@@ -24,6 +25,10 @@ namespace ProjectStarter_tests {
         public void CreateDirectoryInWorkingDirectory(string name) {
             CreateDirectoryInWorkingDirectoryCalled = true;
             directoriesCreated.Add(name);
+        }
+
+        public void ReadFile(string name) {
+            FilesRead.Add(name);
         }
     }
 }

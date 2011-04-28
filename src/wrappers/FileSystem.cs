@@ -9,6 +9,7 @@ namespace ProjectStarter
         void CreateDirectory(string name);
         void CreateFile(string name, string contents);
         void CreateDirectoryInWorkingDirectory(string name);
+        void ReadFile(string name);
     }
 
     public class FileSystem : IFileSystem
@@ -38,6 +39,10 @@ namespace ProjectStarter
         public void CreateFile(string name, string contents)
         {
             _fileInfoWrapper.CreateFile(name, contents);
+        }
+
+        public void ReadFile(string name) {
+            
         }
     }
         
