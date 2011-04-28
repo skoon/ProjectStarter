@@ -51,7 +51,7 @@
         <TestReference Include="System.Core.dll" />
         <TestReference Include="lib/xunit-1.7/xunit.dll" />
         <TestReference Include="lib/Moq.3.1.416.3-bin/Moq.dll" />
-        <TestReference Include="$(OutDir)/ProjectStarter.exe" />
+        <TestReference Include="$(OutDir)/$(AppName).exe" />
     </ItemGroup>
 
     <Target Name="All" DependsOnTargets="Clean; Compile; CompileTests; RunTests">
@@ -83,7 +83,7 @@
             SourceFiles="lib\xunit-1.7\xunit.dll;lib\Moq.3.1.416.3-bin\Moq.dll"
             DestinationFolder="$(OutDir)" />
         <!-- Change this to point to your Assembly or exe -->
-        <xunit Assembly="$(OutDir)\ProjectStarter-tests.dll" />
+        <xunit Assembly="$(OutDir)\$(AppName)-tests.dll" />
     </Target>
     
     <Target Name="Clean">
