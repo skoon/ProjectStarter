@@ -9,7 +9,7 @@ namespace ProjectStarter
 
         public ArgParser(string[] args, IFileSystem FileSystem) {
             if(FileSystem == null) throw  new ArgumentNullException("FileSystem can not be null");
-            Config = FileSystem.ReadFile("default.json");
+            Config = new ProjectStarterConfig(FileSystem.ReadFile("default.json"));
             if(args != null) {
                 Command = new NewProject(FileSystem);
                 Command.Args = args;
