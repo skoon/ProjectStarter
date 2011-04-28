@@ -27,8 +27,9 @@ namespace ProjectStarter_tests {
             directoriesCreated.Add(name);
         }
 
-        public void ReadFile(string name) {
+        public string ReadFile(string name) {
             FilesRead.Add(name);
+            return string.Empty;
         }
     }
 }
