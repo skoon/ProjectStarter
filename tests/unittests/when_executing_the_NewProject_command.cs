@@ -1,8 +1,9 @@
 using System;
 using Xunit;
 using ProjectStarter;
+using ProjectStarter_Tests.Mocks;
 
-namespace ProjectStarter_tests {
+namespace ProjectStarter_Tests.UnitTests {
 
     public class when_executing_the_NewProject_command {
         

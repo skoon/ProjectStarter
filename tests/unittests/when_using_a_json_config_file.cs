@@ -1,8 +1,9 @@
 using System;
 using ProjectStarter;
+using ProjectStarter_Tests.Mocks;
 using Xunit;
 
-namespace ProjectStarter_tests {
+namespace ProjectStarter_Tests.UnitTests {
 
     public class when_using_a_json_config_file {
 

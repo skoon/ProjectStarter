@@ -20,6 +20,8 @@ namespace ProjectStarter {
             _fileSystem.CreateDirectoryInWorkingDirectory("src");
             _fileSystem.CreateDirectoryInWorkingDirectory("tests");
             _fileSystem.CreateDirectoryInWorkingDirectory("lib");
+            _fileSystem.CreateDirectoryInWorkingDirectory("configs");
+            _fileSystem.CreateDirectoryInWorkingDirectory("wraps");
         }
 
         public string[] Args {get; set;}
