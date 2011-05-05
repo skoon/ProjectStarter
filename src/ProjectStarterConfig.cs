@@ -11,6 +11,7 @@ namespace ProjectStarter {
         public static ProjectStarterConfig LoadConfig(string configFileContents) {
             JavaScriptSerializer serializer = new JavaScriptSerializer();
             var config = serializer.Deserialize<ProjectStarterConfig>(configFileContents);
+            config.Config = configFileContents;
             return config;
 
         }
