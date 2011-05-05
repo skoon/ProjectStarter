@@ -10,7 +10,6 @@ namespace ProjectStarter {
     public class NewProject : ICommand {
        
         private IFileSystem _fileSystem;
-        private string[] _directorylist = new string[] { "src", "tests", "lib", "wraps", "configs" };
 
         public NewProject(IFileSystem FileSystem) {
             _fileSystem = FileSystem; 
@@ -18,13 +17,9 @@ namespace ProjectStarter {
 
         public void Execute() {
             _fileSystem.CreateDirectory(Args[0]);
-             createDirectories();
-        }
-
-        public void createDirectories() {
-            foreach(string dir in _directorylist) {
-                _fileSystem.CreateDirectoryInWorkingDirectory(dir);
-            }
+            _fileSystem.CreateDirectoryInWorkingDirectory("src");
+            _fileSystem.CreateDirectoryInWorkingDirectory("tests");
+            _fileSystem.CreateDirectoryInWorkingDirectory("lib");
         }
 
         public string[] Args {get; set;}

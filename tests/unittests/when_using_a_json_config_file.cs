@@ -30,5 +30,11 @@ namespace ProjectStarter_tests {
         public void config_file_should_be_the_proper_type() {
             Assert.IsType(typeof(ProjectStarterConfig), _parser.Config);
         }
+
+        [Fact]
+        public void config_object_should_contain_a_project_root_name() {
+            Assert.NotNull(_parser.Config.RootDirectory);
+            Assert.IsType(typeof(string), _parser.Config.RootDirectory);
+        }
     }
 }

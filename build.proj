@@ -1,5 +1,5 @@
 <Project DefaultTargets="All" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" 
-    ToolsVersion="3.5">
+    ToolsVersion="4.0">
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 
     <PropertyGroup Condition="'$(Configuration)'==''">
