@@ -7,6 +7,7 @@ namespace ProjectStarter {
 
         public string Config { get; set; }
         public string RootDirectory { get; set; }
+        public string[] SubDirectories { get; set; }
 
         public static ProjectStarterConfig LoadConfig(string configFileContents) {
             JavaScriptSerializer serializer = new JavaScriptSerializer();

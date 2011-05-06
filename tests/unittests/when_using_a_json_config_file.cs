@@ -11,7 +11,7 @@ namespace ProjectStarter_Tests.UnitTests {
         private ArgParser _parser;
 
         private const string DefaultConfigFileName = "default.json";
-        private const string JsonConfig =  @"{ ""RootDirectory"": ""Test"" }";
+        private const string JsonConfig =  @"{ ""RootDirectory"": ""Test"", ""SubDirectories"": [""test""] }";
             
 
         public when_using_a_json_config_file() {
@@ -44,6 +44,11 @@ namespace ProjectStarter_Tests.UnitTests {
         public void config_object_should_contain_a_project_root_name() {
             Assert.NotNull(_parser.Config.RootDirectory);
             Assert.IsType(typeof(string), _parser.Config.RootDirectory);
+        }
+
+        [Fact]
+        public void config_object_should_contain_a_list_of_subdirectories() {
+            Assert.NotEmpty(_parser.Config.SubDirectories);
         }
     }
 }
