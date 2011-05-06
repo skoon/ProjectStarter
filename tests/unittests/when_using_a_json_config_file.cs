@@ -27,28 +27,28 @@ namespace ProjectStarter_Tests.UnitTests {
 
         [Fact]
         public void should_deserialize_the_config_file() {
-            Assert.NotNull(_parser.Config);
+            Assert.NotNull(_parser.ProjectConfig);
         }
 
         [Fact]
         public void Config_property_should_contain_the_config_contents() {
-            Assert.Equal(JsonConfig, _parser.Config.Config);
+            Assert.Equal(JsonConfig, _parser.ProjectConfig.RawConfig);
         }
 
         [Fact]
         public void config_file_should_be_the_proper_type() {
-            Assert.IsType(typeof(ProjectStarterConfig), _parser.Config);
+            Assert.IsType(typeof(Config), _parser.ProjectConfig);
         }
 
         [Fact]
         public void config_object_should_contain_a_project_root_name() {
-            Assert.NotNull(_parser.Config.RootDirectory);
-            Assert.IsType(typeof(string), _parser.Config.RootDirectory);
+            Assert.NotNull(_parser.ProjectConfig.RootDirectory);
+            Assert.IsType(typeof(string), _parser.ProjectConfig.RootDirectory);
         }
 
         [Fact]
         public void config_object_should_contain_a_list_of_subdirectories() {
-            Assert.NotEmpty(_parser.Config.SubDirectories);
+            Assert.NotEmpty(_parser.ProjectConfig.SubDirectories);
         }
     }
 }
