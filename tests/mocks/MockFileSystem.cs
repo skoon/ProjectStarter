@@ -14,7 +14,7 @@ namespace ProjectStarter_Tests.Mocks {
         public List<string> directoriesCreated = new List<string>();
         public List<string> FilesRead = new List<string>();
 
-        public string ReturnFromReadFile { get; set; }
+        public string ReturnFromReadFile = "{test:'test'}"; 
 
         public void CreateDirectory(string name) {
             CreateDirectoryCalled = true;

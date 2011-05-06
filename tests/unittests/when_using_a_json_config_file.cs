@@ -32,7 +32,7 @@ namespace ProjectStarter_Tests.UnitTests {
 
         [Fact]
         public void Config_property_should_contain_the_config_contents() {
-            Assert.Equals(JsonConfig, _parser.Config.Config);
+            Assert.Equal(JsonConfig, _parser.Config.Config);
         }
 
         [Fact]
