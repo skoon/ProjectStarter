@@ -19,32 +19,32 @@ namespace ProjectStarter_Tests.UnitTests {
 
         [Fact]
         public void the_project_directory_should_be_created() {
-            Assert.Contains(projectname, mockFileSystem.directoriesCreated);
+            Assert.Contains(projectname, mockFileSystem.DirectoriesCreated);
         }
 
         [Fact]
         public void the_src_directory_should_be_created() {
-            Assert.Contains("src", mockFileSystem.directoriesCreated);
+            Assert.Contains("src", mockFileSystem.DirectoriesCreated);
         }
 
         [Fact]
         public void the_tests_directory_should_be_created() {
-            Assert.Contains("tests", mockFileSystem.directoriesCreated);
+            Assert.Contains("tests", mockFileSystem.DirectoriesCreated);
         }
    
        [Fact]
        public void the_lib_directory_should_be_created() {
-           Assert.Contains("lib", mockFileSystem.directoriesCreated);
+           Assert.Contains("lib", mockFileSystem.DirectoriesCreated);
        } 
 
        [Fact]
        public void the_wraps_directory_should_be_created() {
-            Assert.Contains("wraps", mockFileSystem.directoriesCreated);
+            Assert.Contains("wraps", mockFileSystem.DirectoriesCreated);
        }
 
        [Fact]
        public void the_configs_directory_should_be_created() {
-            Assert.Contains("configs", mockFileSystem.directoriesCreated);
+            Assert.Contains("configs", mockFileSystem.DirectoriesCreated);
        }
     }
 }

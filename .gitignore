@@ -1,6 +1,9 @@
 obj
 bin
 *.csproj.user
+*.csproj
+*.sln
+*.suo
 *ReSharper*
 *resharper*
 *.suo

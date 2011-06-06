@@ -16,6 +16,8 @@ namespace ProjectStarter {
         public string[] SubDirectories { get; set; }
 
         public static IConfig LoadConfig(string configFileContents) {
+            if(String.IsNullOrEmpty(configFileContents))
+                throw new ArgumentException("The file contents must contain valid JSON");
             JavaScriptSerializer serializer = new JavaScriptSerializer();
             var config = serializer.Deserialize<Config>(configFileContents);
             config.RawConfig = configFileContents;
