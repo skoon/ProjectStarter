@@ -56,6 +56,7 @@ namespace ProjectStarter_Tests.UnitTests {
     public class when_there_is_no_config_file_present {
         private MockFileSystem _mockFileSystem;
         private ArgParser _parser;
+    
 
         public when_there_is_no_config_file_present() {
             _mockFileSystem = new MockFileSystem();
