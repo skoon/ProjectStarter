@@ -9,7 +9,7 @@ bin
 *.suo
 *.cache
 * Thumbs.db
-
+Properties
 # Other useful stuff
 *.bak
 *.cache
