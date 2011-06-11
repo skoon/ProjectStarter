@@ -19,8 +19,7 @@ namespace ProjectStarter
             }
             ProjectConfig = Config.LoadConfig(configFileContents);
             if(args != null) {
-                Command = new NewProject(FileSystem);
-                Command.Args = args;
+                Command = new NewProject(FileSystem) { Args = args, Config=ProjectConfig };
             }
         }        
     }

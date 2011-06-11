@@ -7,8 +7,8 @@ namespace ProjectStarter_Tests.UnitTests {
 
     public class when_using_a_json_config_file {
 
-        private readonly MockFileSystem _mockFileSystem;
-        private readonly ArgParser _parser;
+        protected readonly MockFileSystem _mockFileSystem;
+        protected readonly ArgParser _parser;
 
         private const string DefaultConfigFileName = "default.json";
         private const string JsonConfig =  @"{ ""RootDirectory"": ""Test"", ""SubDirectories"": [""test""] }";
