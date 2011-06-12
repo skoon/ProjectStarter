@@ -17,7 +17,12 @@ namespace ProjectStarter {
         }
 
         public void Execute() {
+            if (!String.IsNullOrEmpty(Args[0]))
+                Config.RootDirectory = Args[0];
             _fileSystem.CreateDirectory(Config.RootDirectory);
+            foreach (var dir in Config.SubDirectories) {
+                _fileSystem.CreateDirectoryInWorkingDirectory(dir);
+            }
         }
 
         public string[] Args {get; set;}
