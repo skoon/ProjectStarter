@@ -12,8 +12,7 @@ namespace ProjectStarter_Tests.UnitTests {
         public const string projectname = "test";
 
         public when_executing_the_NewProject_command() {
-            _mockFileSystem = new MockFileSystem();
-            _mockFileSystem.ReturnFromReadFile = null;
+            _mockFileSystem = new MockFileSystem() { ReturnFromReadFile = null };
             var parser = new ArgParser(new string[] {projectname}, _mockFileSystem); 
             parser.Command.Execute();
         }
