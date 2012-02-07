@@ -13,9 +13,16 @@ namespace ProjectStarter
 
     public class DirectoryInfoWrapper : IDirectoryInfoWrapper
     {
-        private DirectoryInfo dirInfo;
 
         public string WorkingDirectory { get; set; }
+        public string FullPath
+        {
+            get
+            {
+                return Path.GetFullPath(WorkingDirectory);
+
+            }
+        }
         
         public bool Exists(string path)
         {
