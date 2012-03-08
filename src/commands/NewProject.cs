@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.Composition;
 
 namespace ProjectStarter {
     public interface ICommand {
@@ -7,6 +8,7 @@ namespace ProjectStarter {
         IConfig Config { get; set; }
     }
 
+    [Export(typeof(ICommand))]
     public class NewProject : ICommand {
 
         private readonly IFileSystem _fileSystem;

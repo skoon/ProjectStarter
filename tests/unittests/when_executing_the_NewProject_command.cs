@@ -38,8 +38,8 @@ namespace ProjectStarter_Tests.UnitTests {
        } 
 
        [Fact]
-       public void the_wraps_directory_should_be_created() {
-            Assert.Contains("wraps", _mockFileSystem.DirectoriesCreated);
+       public void the_packages_directory_should_be_created() {
+            Assert.Contains("packages", _mockFileSystem.DirectoriesCreated);
        }
 
        [Fact]

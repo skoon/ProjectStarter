@@ -2,7 +2,7 @@ using System;
 
 namespace ProjectStarter {
     public class ArgParser {
-        private const string _defaultConfig = @"{ ""RootDirectory"": ""New Project"", ""SubDirectories"": [""src"", ""lib"",""docs"",""tests"", ""configs"",""wraps""] }";
+        private const string _defaultConfig = @"{ ""RootDirectory"": ""New Project"", ""SubDirectories"": [""src"", ""lib"",""docs"",""tests"", ""configs"",""packages""] }";
 
 
         public ICommand Command { get; set; }

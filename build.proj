@@ -43,6 +43,7 @@
         <AppReference Include="System.dll" />
         <AppReference Include="System.Core.dll" />
         <AppReference Include="System.Web.Extensions.dll" />
+        <AppReference Include="System.ComponentModel.Composition.dll" />
          <!-- Add your other references here -->
 
         <TestFiles Include="tests\\**\*.cs" />
