@@ -1,1 +1,1 @@
-Giles.0.1.2.0\tools\Giles.ps1 .
+powershell.exe -noexit "Giles.0.1.2.0\tools\Giles.ps1" 
