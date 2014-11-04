@@ -1,5 +1,5 @@
 using System;
-using System.Web.Script.Serialization;
+using Newtonsoft.Json.Serialization;
 
 namespace ProjectStarter {
 
@@ -18,8 +18,7 @@ namespace ProjectStarter {
         public static IConfig LoadConfig(string configFileContents) {
             if(String.IsNullOrEmpty(configFileContents))
                 throw new ArgumentException("The file contents must contain valid JSON");
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-            var config = serializer.Deserialize<Config>(configFileContents);
+            var config = Newtonsoft.Json.JsonConvert.DeserializeObject<Config>(configFileContents);
             config.RawConfig = configFileContents;
             return config;
 
