@@ -6,7 +6,9 @@ namespace ProjectStarter {
     public interface IConfig {
         string RawConfig { get; set; }
         string RootDirectory { get; set; }
+        string LibPath { get; }
         string[] SubDirectories { get; set; }
+        Package[] Packages { get; }
     }
 
     public class Config : IConfig{

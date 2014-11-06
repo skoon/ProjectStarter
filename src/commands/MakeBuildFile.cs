@@ -3,6 +3,8 @@ using System.ComponentModel.Composition;
 
 namespace ProjectStarter
 {
+
+    [Export(typeof(ICommand))]
     public class MakeBuildFile : ICommand
     {
 
