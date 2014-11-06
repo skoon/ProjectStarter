@@ -5,11 +5,5 @@ using System.Text;
 
 namespace ProjectStarter
 {
-    public class NewProjectException : Exception
-    {
-        public NewProjectException(string message, Exception ex)
-        {
-            
-        }
-    }
+
 }

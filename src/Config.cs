@@ -25,6 +25,11 @@ namespace ProjectStarter {
             return config;
 
         }
+
+
+        public string LibPath { get; set; }
+
+        public Package[] Packages { get; set; }
     }    
 
 }
